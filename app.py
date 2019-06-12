@@ -12,6 +12,7 @@ def index_handler(env):
         "extra_headers": {'Content-Type': 'text/plain'}
     }
 
+
 @application.add_handler('/contact/')
 def contact_handler(env):
     return {
@@ -19,14 +20,11 @@ def contact_handler(env):
         "extra_headers": {'Content-Type': 'text/json'}
     }
 
-@application.add_handler('/staff/')
+
+@application.add_handler('/wsgi/')
 def stuf_handler(env):
     content = view('index.html')
     return {
         "html": content,
         "extra_headers": {'Content-Type': 'text/html'}
     }
-
-
-# application.add_handler("/", index_handler)
-# application.add_handler("/contacts/", contact_handler)

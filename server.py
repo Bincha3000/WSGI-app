@@ -1,6 +1,7 @@
 import json
 from http.client import responses
 
+
 class Application:
 
     redirect_if_no_trailing_slash = True
